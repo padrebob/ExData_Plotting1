@@ -7,8 +7,6 @@ consumption <- read.table("household_power_consumption.txt",
 
 consumption$Date <- as.Date(consumption$Date, format = "%d/%m/%Y")
 
-## consumption$Time <- strptime(consumption$Time, format = "%H:%M:%S")
-
 consumption <- subset(consumption, Date == as.Date("2007-02-01") | Date == as.Date("2007-02-02"))
 
 ## Construct the plot
